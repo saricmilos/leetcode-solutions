@@ -50,4 +50,4 @@ if __name__ == "__main__":
     target = 9
 
     # Call the twoSum method and print result
-    print(sol.twoSum(nums, target))  # Output: [0, 1]
+    print(sol.twoSum(nums, target))
