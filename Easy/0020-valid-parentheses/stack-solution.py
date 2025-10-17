@@ -8,6 +8,7 @@ class Solution:
         A string is valid if:
         1. Open brackets are closed by the same type of brackets.
         2. Open brackets are closed in the correct order.
+        3. Every close bracket has a corresponding open bracket of the same type.
 
         Args:
             s (str): The input string containing only '()', '{}', '[]'.
