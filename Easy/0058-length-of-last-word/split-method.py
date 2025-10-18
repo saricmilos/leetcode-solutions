@@ -11,6 +11,13 @@ class Solution:
 
         Returns:
             int: The length of the last word. Returns 0 if no words exist.
+
+        Time Complexity:
+            O(n), where n is the length of the string `s`. 
+            This is because `split()` scans the entire string once.
+
+        Space Complexity:
+            O(n) in the worst case, due to storing all words in a list returned by `split()`.
         """
         list_of_words = s.split()
         if not list_of_words:
