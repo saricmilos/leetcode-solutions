@@ -40,11 +40,6 @@ def build_linked_list(values: List[int]) -> Optional[ListNode]:
 
     Returns:
         The head ListNode of the constructed linked list or None for empty input.
-
-    Example:
-        >>> head = build_linked_list([1, 1, 2])
-        >>> to_list(head)
-        [1, 1, 2]
     """
     if not values:
         return None
@@ -65,10 +60,6 @@ def to_list(head: Optional[ListNode]) -> List[int]:
 
     Returns:
         List of integer values in order.
-
-    Example:
-        >>> to_list(build_linked_list([1,2,3]))
-        [1, 2, 3]
     """
     out: List[int] = []
     cur = head
