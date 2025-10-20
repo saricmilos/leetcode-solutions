@@ -1,0 +1,51 @@
+from typing import List
+
+class Solution:
+    """
+    Solution for LeetCode 118: Pascal's Triangle
+
+    Generates the first `numRows` rows of Pascal's Triangle.
+    Each row starts and ends with 1, and each interior element
+    is the sum of the two elements directly above it.
+
+    Time Complexity: O(n^2), where n = numRows
+    Space Complexity: O(n^2), for storing the triangle
+    """
+
+    def generate(self, numRows: int) -> List[List[int]]:
+        """
+        Generate Pascal's Triangle up to numRows.
+
+        Args:
+            numRows (int): Number of rows to generate.
+
+        Returns:
+            List[List[int]]: Pascal's Triangle represented as a list of rows.
+        """
+        pascals_triangle = [[1]]
+
+        for row in range(1, numRows):
+            pascals_row = [1]
+            for element_in_row in range(1, row):
+                pascals_row.append(
+                    pascals_triangle[row - 1][element_in_row - 1] +
+                    pascals_triangle[row - 1][element_in_row]
+                )
+            pascals_row.append(1)
+            pascals_triangle.append(pascals_row)
+
+        return pascals_triangle
+
+
+# -------------------- Example Usage --------------------
+if __name__ == "__main__":
+    sol = Solution()
+    print(sol.generate(5))
+    # Output:
+    # [
+    #   [1],
+    #   [1, 1],
+    #   [1, 2, 1],
+    #   [1, 3, 3, 1],
+    #   [1, 4, 6, 4, 1]
+    # ]
