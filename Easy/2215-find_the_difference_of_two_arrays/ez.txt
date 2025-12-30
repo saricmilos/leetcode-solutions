@@ -1,0 +1,23 @@
+from typing import List
+
+class Solution:
+    """
+    Solution for LeetCode 2215: Find the Difference of Two Arrays.
+
+    Returns a list of two lists:
+    - Unique elements in nums1 not in nums2
+    - Unique elements in nums2 not in nums1
+    """
+
+    def findDifference(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
+        """
+        Find the difference between two arrays.
+
+        Args:
+            nums1 (List[int]): First list of integers.
+            nums2 (List[int]): Second list of integers.
+
+        Returns:
+            List[List[int]]: [elements in nums1 not in nums2, elements in nums2 not in nums1]
+        """
+        return [list(set(nums1) - set(nums2)), list(set(nums2) - set(nums1))]
